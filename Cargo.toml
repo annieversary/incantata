@@ -1,0 +1,15 @@
+[package]
+name = "incantata"
+version = "0.1.0"
+edition = "2018"
+
+[lib]
+name = "incantata"
+path = "src/lib.rs"
+
+[[bin]]
+name = "incantata"
+path = "src/bin.rs"
+
+[dependencies]
+rand = "0.8.4"
