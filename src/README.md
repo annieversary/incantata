@@ -1,3 +1,8 @@
+# incantata
+
+incantata is a rust library that generates random words according to a provided structure
+
+```rust
 use incantata::*;
 
 fn main() {
@@ -36,3 +41,4 @@ fn main() {
         println!("{}", incantata(&s));
     }
 }
+```
