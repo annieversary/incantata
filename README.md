@@ -1,6 +1,8 @@
 # incantata
 
-incantata is a rust library that generates random words according to a provided structure
+incantata is a rust library that generates random (non-sensical) words according to a provided structure
+
+there's also a cli, you can run it with `cargo r`. it will generate ten words every time you press enter
 
 ```rust
 use incantata::*;
@@ -18,8 +20,8 @@ fn main() {
         // allowed characters for the nucleus
         nucleus_dict: VOCALS
             .chars()
-            .cycle()
-            .take(VOCALS.len() * 5)
+            // .cycle()
+            // .take(VOCALS.len() * 5)
             // .chain(VOCALS_ACCENTS.chars())
             .collect(),
 
@@ -38,7 +40,7 @@ fn main() {
 
     // generate 10 words
     for _ in 0..10 {
-        println!("{}", incantata(&s));
+        println!("{}", s.generate());
     }
 }
 ```
